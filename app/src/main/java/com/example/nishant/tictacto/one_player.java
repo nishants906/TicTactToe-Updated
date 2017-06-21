@@ -19,7 +19,7 @@ public class one_player extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(one_player.this, one_p_easy.class);
+                        Intent intent = new Intent(one_player.this, one_player_easy.class);
                         startActivity(intent);
                     }
                 }
@@ -29,7 +29,7 @@ public class one_player extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(one_player.this, one_p_difficult.class);
+                        Intent intent = new Intent(one_player.this, one_player_difficult.class);
                         startActivity(intent);
                     }
                 }
