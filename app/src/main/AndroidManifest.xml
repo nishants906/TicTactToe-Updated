@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nishant.tictacto">
 
@@ -14,6 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
+            android:exported="true"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"></activity>
         <activity
@@ -68,12 +70,11 @@
             android:label="High Scores"
             android:screenOrientation="portrait" />
         <activity android:name=".BluetoothActivity" />
-        <activity android:name=".SingleDevice2P" />
+        <activity android:name=".two_player_single_device" />
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
-
         <activity android:name=".two_device_two_player_name"></activity>
     </application>
 

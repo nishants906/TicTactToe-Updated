@@ -10,6 +10,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import static com.example.nishant.tictacto.R.id.RGtwoPlayer;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,8 +132,20 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-       }
-
-
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        SharedPreferences.Editor edit = sharedPrefs.edit();
+        edit.putString("PLAYER1", two_player_names.p1Name);
+        edit.putString("PLAYER2", two_player_names.p2Name);
+        edit.putString("MYNAME", two_device_two_player_name.MyName);
+        edit.commit();
+
+    }
+}

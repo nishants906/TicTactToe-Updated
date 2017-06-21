@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFF3E0">
-    <com.example.nishant.tictacto.one_difficult
+    <com.example.nishant.tictacto.one_difficult_canvas
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:background="#FFE7BF"
