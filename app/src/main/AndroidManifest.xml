@@ -79,7 +79,8 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".TwoDevice2P_names" />
-        <activity android:name=".two_device_two_player_name"></activity>
+        <activity android:name=".two_device_two_player_name" />
+        <activity android:name=".two_device_two_player"></activity>
     </application>
 
 </manifest>
