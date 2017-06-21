@@ -1,6 +1,8 @@
 package com.example.nishant.tictacto;
 
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,9 +31,10 @@ public class two_player_names extends AppCompatActivity {
         start2p = (Button) findViewById(R.id.start2p);
         start2p.setOnClickListener(
                 new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(two_player_names.this, SingleDevice2P.class);
+                        Intent intent = new Intent(two_player_names.this, two_player_single_device.class);
                         if ((!Objects.equals(p1.getText().toString(), "")) && (!Objects.equals(p2.getText().toString(), "")) && (!Objects.equals(p1.getText().toString(), p2.getText().toString())) && (p1.getText().toString().length() <= 10) && (p2.getText().toString().length() <= 10)) {
                             p1Name = p1.getText().toString().trim().toUpperCase();
                             p2Name = p2.getText().toString().trim().toUpperCase();

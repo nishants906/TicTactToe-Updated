@@ -10,12 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
-import com.example.nishant.tictacto.R;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
-
 import static com.example.nishant.tictacto.R.id.RGtwoPlayer;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPrefs = getSharedPreferences("NAMES", MODE_PRIVATE);
         two_player_names.p1Name = sharedPrefs.getString("PLAYER1", two_player_names.p1Name);
         two_player_names.p2Name = sharedPrefs.getString("PLAYER2", two_player_names.p2Name);
-        TwoDevice2P_names.MyName = sharedPrefs.getString("MYNAME", TwoDevice2P_names.MyName);
+        two_device_two_player_name.MyName = sharedPrefs.getString("MYNAME", two_device_two_player_name.MyName);
 
         b1 = (Button) findViewById(R.id.b1);
         b2 = (Button) findViewById(R.id.b2);
@@ -128,59 +121,13 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, highscores2p.class);
+                        Intent intent = new Intent(MainActivity.this, highscores.class);
                         startActivity(intent);
                     }
                 }
         );
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+       }
+
+
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.haresh.tic_tac_toe_app/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        SharedPreferences.Editor edit = sharedPrefs.edit();
-        edit.putString("PLAYER1", two_player_names.p1Name);
-        edit.putString("PLAYER2", two_player_names.p2Name);
-        edit.putString("MYNAME", TwoDevice2P_names.MyName);
-        edit.commit();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app deep link URI is correct.
-                Uri.parse("android-app://com.example.haresh.tic_tac_toe_app/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
-    }
-}

@@ -18,7 +18,7 @@ public class highscores extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_highscores2p);
+        setContentView(R.layout.activity_highscores);
         Button clear = (Button) findViewById(R.id.clear);
         clear.setOnClickListener(
                 new View.OnClickListener() {

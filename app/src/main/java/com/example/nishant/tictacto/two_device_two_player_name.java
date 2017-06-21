@@ -59,7 +59,7 @@ public class two_device_two_player_name extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two_device2_p_names);
+        setContentView(R.layout.activity_two_device_two_player_name);
         btn = (Button) findViewById(R.id.btn_find);
         name = (EditText) findViewById(R.id.myName);
         name.setText(MyName);

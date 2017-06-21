@@ -162,7 +162,7 @@ public class BluetoothActivity extends Activity {
 
         mBluetoothDevice = device;
         mBluetoothSocket = socket;
-        Intent intent = new Intent(this, TwoDevice2P.class);
+        Intent intent = new Intent(this, two_device_two_player.class);
         startActivityForResult(intent, Finished_Activity);
 
     }

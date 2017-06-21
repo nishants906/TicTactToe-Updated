@@ -123,7 +123,7 @@ public class two_player_single_canvas extends View { //you have to create a new 
                         invalidate();
                         check();
                     } else {
-                        SingleDevice2P.act_2p_single.finish();
+                        two_player_single_device.act_2p_single.finish();
                     }
                 }
             }
@@ -137,7 +137,7 @@ public class two_player_single_canvas extends View { //you have to create a new 
             public void onClick(DialogInterface dialog, int which) {
                 switch (which) {
                     case DialogInterface.BUTTON_POSITIVE: {
-                        SingleDevice2P.act_2p_single.finish();
+                        two_player_single_device.act_2p_single.finish();
                         break;
                     }
                     case DialogInterface.BUTTON_NEGATIVE: {

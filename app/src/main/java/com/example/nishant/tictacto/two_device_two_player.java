@@ -22,7 +22,7 @@ public class two_device_two_player extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         act_2p = this;
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two_player);
+        setContentView(R.layout.activity_two_device_two_player);
     }
 
 }
