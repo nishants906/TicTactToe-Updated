@@ -102,11 +102,11 @@ public class MainActivity extends AppCompatActivity {
                         if (singleSelected) {
                             if (easy.isChecked()) {
                                 Intent intent;
-                                intent = new Intent(MainActivity.this, single_player_easy.class);
+                                intent = new Intent(MainActivity.this, one_player_easy.class);
                                 startActivity(intent);
                             } else if (difficult.isChecked()) {
                                 Intent intent;
-                                intent = new Intent(MainActivity.this, single_player_difficult.class);
+                                intent = new Intent(MainActivity.this, one_player_difficult.class);
                                 startActivity(intent);
                             }
                         } else {
