@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                             } else {
                                 Intent intent;
-                                intent = new Intent(MainActivity.this, TwoDevice2P_names.class);
+                                intent = new Intent(MainActivity.this, two_device_two_player_name.class);
                                 startActivity(intent);
                             }
                         }

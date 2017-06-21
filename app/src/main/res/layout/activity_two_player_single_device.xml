@@ -7,9 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FFF3E0"
-    android:orientation="horizontal">
-    <com.example.nishant.tictacto.two_player_two_device_canvas
+    android:background="#FFF3E0">
+
+    <com.example.nishant.tictacto.two_player_single_canvas
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:background="#FFE7BF"

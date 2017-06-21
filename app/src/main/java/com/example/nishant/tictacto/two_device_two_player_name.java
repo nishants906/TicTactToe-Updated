@@ -177,7 +177,7 @@ public class two_device_two_player_name extends AppCompatActivity {
 
         mBluetoothDevice = device;
         mBluetoothSocket = socket;
-        Intent intent = new Intent(two_device_two_player_name.this, TwoDevice2P.class);
+        Intent intent = new Intent(two_device_two_player_name.this, two_device_two_player.class);
         startActivityForResult(intent, Finished_Activity);
 
     }

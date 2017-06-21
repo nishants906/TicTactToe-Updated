@@ -80,7 +80,9 @@
 
         <activity android:name=".TwoDevice2P_names" />
         <activity android:name=".two_device_two_player_name" />
-        <activity android:name=".two_device_two_player"></activity>
+        <activity android:name=".two_device_two_player" />
+        <activity android:name=".two_player_single_device" />
+        <activity android:name=".highscores"></activity>
     </application>
 
 </manifest>
