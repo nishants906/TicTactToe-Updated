@@ -1,8 +1,5 @@
 package com.example.nishant.tictacto;
 
-/**
- * Created by Nishant on 21/06/17.
- */
 
 import android.app.Activity;
 import android.app.AlertDialog;
